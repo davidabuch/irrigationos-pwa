@@ -1,0 +1,3 @@
+# Deployment boundary
+
+Experimental container, not yet a Home Assistant add-on. The server requires APP_PASSWORD (minimum 24 characters), username irrigation. Basic authentication must only be used over trusted HTTPS or loopback; do not publish the HTTP port to an untrusted network. Keep HA_TOKEN and APP_PASSWORD in local secret configuration. HA_URL is the trusted HA origin. BIND_HOST defaults to 127.0.0.1; container deployments may explicitly bind 0.0.0.0 only behind an isolated trusted TLS reverse proxy. No direct Internet port forwarding. Cloudflare Access is an additional boundary, not a substitute for origin authentication. Do not deploy until the origin transport, proxy and live entity discovery are verified. No HA services are invoked.
